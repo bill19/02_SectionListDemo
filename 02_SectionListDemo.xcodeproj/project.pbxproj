@@ -12,6 +12,9 @@
 		BC28E5A21B5F7905003C1CC3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC28E5A11B5F7905003C1CC3 /* Images.xcassets */; };
 		BC28E5A51B5F7905003C1CC3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC28E5A31B5F7905003C1CC3 /* LaunchScreen.xib */; };
 		BC28E5B11B5F7905003C1CC3 /* _2_SectionListDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC28E5B01B5F7905003C1CC3 /* _2_SectionListDemoTests.m */; };
+		BC28E5BC1B5F7917003C1CC3 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC28E5BB1B5F7917003C1CC3 /* RootViewController.m */; };
+		BC28E5CB1B5F7ABD003C1CC3 /* SectionTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC28E5CA1B5F7ABD003C1CC3 /* SectionTableView.m */; };
+		BC28E5CE1B5F8B48003C1CC3 /* SectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC28E5CD1B5F8B48003C1CC3 /* SectionModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 		BC28E5AA1B5F7905003C1CC3 /* 02_SectionListDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 02_SectionListDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC28E5AF1B5F7905003C1CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC28E5B01B5F7905003C1CC3 /* _2_SectionListDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _2_SectionListDemoTests.m; sourceTree = "<group>"; };
+		BC28E5BA1B5F7917003C1CC3 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		BC28E5BB1B5F7917003C1CC3 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		BC28E5C91B5F7ABD003C1CC3 /* SectionTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionTableView.h; sourceTree = "<group>"; };
+		BC28E5CA1B5F7ABD003C1CC3 /* SectionTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionTableView.m; sourceTree = "<group>"; };
+		BC28E5CC1B5F8B48003C1CC3 /* SectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SectionModel.h; sourceTree = "<group>"; };
+		BC28E5CD1B5F8B48003C1CC3 /* SectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SectionModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +85,11 @@
 		BC28E5991B5F7905003C1CC3 /* 02_SectionListDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BC28E5C61B5F7ABD003C1CC3 /* SectionTableView */,
 				BC28E59E1B5F7905003C1CC3 /* AppDelegate.h */,
 				BC28E59F1B5F7905003C1CC3 /* AppDelegate.m */,
+				BC28E5BA1B5F7917003C1CC3 /* RootViewController.h */,
+				BC28E5BB1B5F7917003C1CC3 /* RootViewController.m */,
 				BC28E5A11B5F7905003C1CC3 /* Images.xcassets */,
 				BC28E5A31B5F7905003C1CC3 /* LaunchScreen.xib */,
 				BC28E59A1B5F7905003C1CC3 /* Supporting Files */,
@@ -109,6 +121,33 @@
 				BC28E5AF1B5F7905003C1CC3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC28E5C61B5F7ABD003C1CC3 /* SectionTableView */ = {
+			isa = PBXGroup;
+			children = (
+				BC28E5C71B5F7ABD003C1CC3 /* Inner */,
+				BC28E5C81B5F7ABD003C1CC3 /* Outer */,
+			);
+			path = SectionTableView;
+			sourceTree = "<group>";
+		};
+		BC28E5C71B5F7ABD003C1CC3 /* Inner */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Inner;
+			sourceTree = "<group>";
+		};
+		BC28E5C81B5F7ABD003C1CC3 /* Outer */ = {
+			isa = PBXGroup;
+			children = (
+				BC28E5C91B5F7ABD003C1CC3 /* SectionTableView.h */,
+				BC28E5CA1B5F7ABD003C1CC3 /* SectionTableView.m */,
+				BC28E5CC1B5F8B48003C1CC3 /* SectionModel.h */,
+				BC28E5CD1B5F8B48003C1CC3 /* SectionModel.m */,
+			);
+			path = Outer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC28E5CE1B5F8B48003C1CC3 /* SectionModel.m in Sources */,
 				BC28E5A01B5F7905003C1CC3 /* AppDelegate.m in Sources */,
+				BC28E5CB1B5F7ABD003C1CC3 /* SectionTableView.m in Sources */,
 				BC28E59D1B5F7905003C1CC3 /* main.m in Sources */,
+				BC28E5BC1B5F7917003C1CC3 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +436,7 @@
 				BC28E5B61B5F7905003C1CC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BC28E5B71B5F7905003C1CC3 /* Build configuration list for PBXNativeTarget "02_SectionListDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +445,7 @@
 				BC28E5B91B5F7905003C1CC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
